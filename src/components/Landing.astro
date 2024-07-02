@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+import kids from "../assets/kids.jpg";
+---
+
+<div class="relative">
+    <Image src={kids} alt="kids-pic" class="p-2 h-svh object-contain" />
+    <h1
+        class="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold"
+    >
+        Rytmika
+    </h1>
+</div>
