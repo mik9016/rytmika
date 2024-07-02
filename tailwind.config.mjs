@@ -4,13 +4,14 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'beige': 'EEEDEB',
-				'orange': 'E6B9A6',
-				'brown': '939185',
-				'dark': '2F3645'
+				'beige': '#EEEDEB',
+				'orange': '#E6B9A6',
+				'brown': '#939185',
+				'dark': '#2F3645'
 			},
 			height: {
 				'9/10': '90%',
+				'80vh': '80vh'
 			},
 		},
 	},

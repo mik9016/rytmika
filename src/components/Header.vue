@@ -1,20 +1,20 @@
 <script setup lang="ts">
 
 const items = [
-  "Start",
-  "O mnie",
-  "Opis zajęć",
-  "Lokalizacja",
-  "Zarezerwuj miejsce",
-  "Kontakt",
+{text:"Start",path: "/"},
+{text:"O mnie",path: "omnie"},
+{text:"Opis zajęć",path: "/opiszajec"},
+{text:"Lokalizacja",path: "/lokalizacja"},
+{text:"Zarezerwuj miejsce",path: "/zarezerwuj"},
+{text:"Kontakt",path: "/kontakt"},
 ]
 
 </script>
 
 <template>
-  <ul class="w-full flex h-24 items-center justify-center gap-8">
+  <ul class="w-full flex h-24 items-center justify-center gap-8 text-dark">
     <li v-for="item in items">
-      <a :href="item" class="cursor-pointer">{{ item }}</a>
+      <a :href="`#${item.path}`" class="cursor-pointer hover:underline-offset-8 hover:underline hover:decoration-orange hover:decoration-[8px] ">{{ item.text }}</a>
     </li>
   </ul>
  
