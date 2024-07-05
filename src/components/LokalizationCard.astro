@@ -8,21 +8,23 @@ interface Props {
 }
 
 const { title, text } = Astro.props;
-const locationLink = 'https://maps.app.goo.gl/Re5FjFwvAK4w2L6G7'
-
+const locationLink = "https://maps.app.goo.gl/Re5FjFwvAK4w2L6G7";
+const bookingUrl = "https://mikj22x.setmore.com/mik";
 ---
-<a href={locationLink} target="_blank" referrerpolicy="no-referrer" class="hover:scale-110 transform transition duration-300 hover:shadow-2xl">
-    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg cursor-pointer text-dark">
-        <Image class="w-full" src={screenshot} alt="Link to Google Maps" />
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{title}</div>
-            <p class="text-base">
-                {text}
-            </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-            
-        </div>
+
+<div
+    class="max-w-sm rounded-lg overflow-hidden shadow-lg cursor-pointer text-dark"
+>
+    <a href={locationLink} target="_blank" referrerpolicy="no-referrer">
+        <Image class="w-full hover:scale-110 transform transition duration-300" src={screenshot} alt="Link to Google Maps" />
+    </a>
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{title}</div>
+        <p class="text-base">
+            {text}
+        </p>
     </div>
-</a>
-    
+    <div class="px-6 pt-4 pb-2 flex justify-center items-center">
+        <a href={bookingUrl} target="_blank" referrerpolicy="no-referrer" class="text-dark bg-transparent border-4 border-solid self-end border-orange hover:bg-orange hover:text-white active:bg-orange font-bold px-8 py-3 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Rezerwuj</a>
+    </div>
+</div>
