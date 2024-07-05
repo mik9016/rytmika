@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import screenshot from "../assets/screenshot.png";
+
+interface Props {
+    title: string;
+    text: string;
+}
+
+const { title, text } = Astro.props;
+const locationLink = 'https://maps.app.goo.gl/Re5FjFwvAK4w2L6G7'
+
+---
+<a href={locationLink} target="_blank" referrerpolicy="no-referrer" class="hover:scale-110 transform transition duration-300 hover:shadow-2xl">
+    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg cursor-pointer text-dark">
+        <Image class="w-full" src={screenshot} alt="Link to Google Maps" />
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">{title}</div>
+            <p class="text-base">
+                {text}
+            </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+            
+        </div>
+    </div>
+</a>
+    
